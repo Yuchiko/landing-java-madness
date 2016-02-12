@@ -3,3 +3,6 @@ dist
 .tmp
 .idea/
 app.yaml
+
+dev/
+release/

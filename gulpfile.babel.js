@@ -220,40 +220,6 @@ gulp.task('html:release', function () {
         .pipe(gulp.dest(folders.release.root))
 });
 
-
-//// Scan your HTML for assets & optimize them
-//gulp.task('html', function(){
-//  const assets = $.useref.assets({searchPath: '{.tmp,app}'});
-//
-//  return gulp.src('app/**/*.html')
-//    .pipe(assets)
-//    // Remove any unused CSS
-//    // Note: If not using the Style Guide, you can delete it from
-//    //       the next line to only include styles your project uses.
-//    .pipe($.if('*.css', $.uncss({
-//      html: [
-//        'app/index.html'
-//      ],
-//      // CSS Selectors for UnCSS to ignore
-//      ignore: [
-//        /.navdrawer-container.open/,
-//        /.app-bar.open/
-//      ]
-//    })))
-//
-//    // Concatenate and minify styles
-//    // In case you are still using useref build blocks
-//    .pipe($.if('*.css', $.minifyCss()))
-//    .pipe(assets.restore())
-//    .pipe($.useref())
-//
-//    // Minify any HTML
-//    .pipe($.if('*.html', $.minifyHtml()))
-//    // Output files
-//    .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
-//    .pipe(gulp.dest('dist'));
-//});
-
 // Clean output directory
 gulp.task('clean', function (cb) {
   del(folders.clean,
