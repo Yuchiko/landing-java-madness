@@ -1,11 +1,5 @@
 $(document).ready(function() {
 
-    /* Wow Init */
-    new WOW().init();
-
-    /* Bakcstretch */
-    $('#promo').backstretch("images/fog.jpg");
-
     /* Input Mask */
     $('#tel').inputmask("(999) 999-99-99");
 
