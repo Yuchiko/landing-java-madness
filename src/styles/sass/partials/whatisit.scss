@@ -1,41 +1,41 @@
 .what-is-it {
-  background: url("../../images/whatisit/pattern.jpg") 0 0 repeat;
-  padding: 70px 0;
-  .icon {
-    text-align: center;
-  }
+	background: url("../../images/whatisit/pattern.jpg") 0 0 repeat;
+	padding: 70px 0;
+	.icon {
+		text-align: center;
+	}
 
-  .title {
-    margin: 30px 0 20px;
-    color: $color-white;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    text-align: center;
-  }
+	.title {
+		margin: 30px 0 20px;
+		color: $color-white;
+		font-size: 16px;
+		line-height: 20px;
+		text-transform: uppercase;
+		text-align: center;
+	}
 
-  .text {
-    padding: 0 30px;
-    color: $color-white;
-    text-align: center;
-    font-size: 14px;
-    line-height: 26px;
-  }
+	.text {
+		padding: 0 30px;
+		color: $color-white;
+		text-align: center;
+		font-size: 14px;
+		line-height: 26px;
+	}
 
-  .col-sm-4 {
-    & + .col-sm-4 {
-      margin-top: 60px;
-    }
-  }
+	.col-sm-4 {
+		& + .col-sm-4 {
+			margin-top: 60px;
+		}
+	}
 
-  @media (min-width: $screen-sm-min) {
-    .text {
-      padding: 0;
-    }
-    .col-sm-4 {
-      & + .col-sm-4 {
-        margin-top: 0;
-      }
-    }
-  }
+	@media (min-width: $screen-sm-min) {
+		.text {
+			padding: 0;
+		}
+		.col-sm-4 {
+			& + .col-sm-4 {
+				margin-top: 0;
+			}
+		}
+	}
 }
