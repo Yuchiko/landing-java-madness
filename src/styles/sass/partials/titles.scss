@@ -1,0 +1,62 @@
+.section-title {
+  position: relative;
+  padding: 60px 0;
+  text-align: center;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: -24px;
+    left: 50%;
+    margin-left: -24px;
+    background: url("../../images/titles/dot-up.png") 0 0 no-repeat;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 48px;
+    height: 100%;
+    bottom: -24px;
+    left: 50%;
+    margin-left: -24px;
+    background: url("../../images/titles/dot-bottom.png") 0 100% no-repeat;
+  }
+
+  .title {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    padding: 20px 70px;
+    background: $color-brand-purple-darker;
+    font-size: 28px;
+    line-height: 28px;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+
+  &.schedule-title {
+    .title {
+        background: $color-brand-orange;
+    }
+  }
+
+  &.speakers-title, .partners-title {
+    .title {
+      background: $color-brand-cayan;
+    }
+  }
+
+  &.tickets-title {
+    .title {
+      background: $color-brand-red;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    padding: 90px 0;
+  }
+}

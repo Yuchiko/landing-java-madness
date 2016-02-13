@@ -63,7 +63,7 @@ const folders = {
   watcher: {
     html: './src/**/*.html',
     js: './src/js/**/*.js',
-    styles: './src/styles/**/*.+(css|scss)',
+    styles: './src/styles/**/*.*',
     img: './src/images/**/*.*',
     fonts: './src/fonts/**/*.*'
   },
@@ -77,6 +77,9 @@ gulp.task('jshint', function() {
       .pipe($.jshint())
       .pipe($.jshint.reporter('jshint-stylish'))
       .pipe($.if(!browserSync.active, $.jshint.reporter('fail')))
+      .on('error', function (error) {
+          console.error('' + error);
+      });
 });
 
 // Images Dev Task
@@ -84,6 +87,9 @@ gulp.task('images:dev', function() {
   gulp.src(folders.src.img)
       .pipe(gulp.dest(folders.dev.img))
       .pipe($.size({title: 'images'}))
+      .on('error', function (error) {
+          console.error('' + error);
+      });
 });
 
 // Images Release Task With Images Optimization
@@ -95,6 +101,9 @@ gulp.task('images:release', function() {
       })))
       .pipe(gulp.dest(folders.release.img))
       .pipe($.size({title: 'images'}))
+      .on('error', function (error) {
+          console.error('' + error);
+      });
 });
 
 // Copy all files at the root level
@@ -107,6 +116,9 @@ gulp.task('copy', function() {
     dot: true
   }).pipe(gulp.dest(folders.release.root))
       .pipe($.size({title: 'copy'}))
+      .on('error', function (error) {
+          console.error('' + error);
+      });
 });
 
 // Dev compile and automatically prefix stylesheets
@@ -127,7 +139,11 @@ gulp.task('styles:dev', function(){
       .pipe($.sourcemaps.write())
       .pipe($.size({title: 'styles'}))
       .pipe($.sourcemaps.write('.'))
-      .pipe(gulp.dest(folders.dev.css));
+      .pipe(gulp.dest(folders.dev.css))
+      .on('error', function (error) {
+          console.error('' + error);
+      });
+
 });
 
 
@@ -150,7 +166,10 @@ gulp.task('styles:release', function(){
     .pipe($.if('*.css', $.concat('bundle.min.css'), $.minifyCss()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('.'))
-      .pipe(gulp.dest(folders.release.css));
+      .pipe(gulp.dest(folders.release.css))
+      .on('error', function (error) {
+          console.error('' + error);
+      });
 });
 
 // Concatenate and minify JavaScript. Optionally transpiles ES2015 code to ES5.
@@ -167,6 +186,9 @@ gulp.task('scripts:dev', function() {
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
       .pipe(gulp.dest(folders.dev.js))
+      .on('error', function (error) {
+          console.error('' + error);
+      });
 });
 
 
@@ -186,17 +208,26 @@ gulp.task('scripts:release', function() {
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
       .pipe(gulp.dest(folders.release.js))
+      .on('error', function (error) {
+          console.error('' + error);
+      });
 });
 
 
 gulp.task('fonts:dev', function() {
     gulp.src(folders.src.fonts)
         .pipe(gulp.dest(folders.dev.fonts))
+        .on('error', function (error) {
+            console.error('' + error);
+        });
 });
 
 gulp.task('fonts:release', function() {
     gulp.src(folders.src.fonts)
         .pipe(gulp.dest(folders.release.fonts))
+        .on('error', function (error) {
+            console.error('' + error);
+        });
 });
 
 
@@ -207,6 +238,9 @@ gulp.task('html:dev', function () {
         // Output files
         //.pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
         .pipe(gulp.dest(folders.dev.root))
+        .on('error', function (error) {
+            console.error('' + error);
+        });
 });
 
 gulp.task('html:release', function () {
@@ -218,6 +252,9 @@ gulp.task('html:release', function () {
         // Output files
         .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
         .pipe(gulp.dest(folders.release.root))
+        .on('error', function (error) {
+            console.error('' + error);
+        });
 });
 
 // Clean output directory
@@ -231,7 +268,7 @@ gulp.task('clean', function (cb) {
 gulp.task('serve:dev', ['dev'], function(){
   browserSync({
     notify: false,
-    tunnel: "kimikamikaze",
+    //tunnel: "kimikamikaze",
     // Customize the Browsersync console logging prefix
     logPrefix: 'BS LOG',
     // Allow scroll syncing across breakpoints

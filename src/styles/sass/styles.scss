@@ -1,13 +1,10 @@
 /*
-* Third Party
-*/
-//@import "../../bower_components/normalize.css/normalize.css";
-
-
-/*
 * Custom
 */
+@import "vendor/bootstrap";
 @import "partials/variables";
 @import "partials/fonts";
-
+@import "partials/titles";
+@import "partials/whatisit";
+@import "partials/counters";
 @import "partials/promo";
