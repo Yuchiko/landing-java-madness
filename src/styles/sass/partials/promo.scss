@@ -5,11 +5,12 @@
     color: $color-white;
     font-size: 30px;
     text-transform: uppercase;
+    padding-top: $header-triangle-height;
     
     h1{
         font: {
             family: $font-promo;
-            size:160px;
+            size: 160px;
         }
         line-height: 0.8;
     }
