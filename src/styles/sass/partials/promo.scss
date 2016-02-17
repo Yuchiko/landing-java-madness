@@ -1,6 +1,44 @@
-.promo{
-    img{
-        position: absolute;
-        width: 100%;
+.promo {
+    background: url('../../images/promo/cover.jpg') 80% 0 no-repeat;
+    background-size: cover;
+    height: 600px;
+    color: $color-white;
+    font-size: 30px;
+    text-transform: uppercase;
+    
+    h1{
+        font: {
+            family: $font-promo;
+            size:160px;
+        }
+        line-height: 0.8;
+    }
+    &-box{
+        font:{
+            family: $font-roboto;
+            weight: 300;
+        }
+    }
+
+    &__time{
+        text-align: center;
+        font-weight: 400;
+        line-height: 60px;
+        .line {
+            border-bottom: 1px solid $color-white;
+            height: 30px;
+        }
+    }
+    
+    &__tickets{
+        margin-top: 60px;
+        text-align: center;
+        .btn--purple{
+           a{
+               padding: 5px 120px;
+               border: 4px double $color-white;
+               font-size: 30px;
+           }
+        }
     }
 }
