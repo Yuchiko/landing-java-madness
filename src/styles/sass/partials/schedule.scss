@@ -1,0 +1,29 @@
+.schedule{
+    font:{
+        family: $font-roboto;
+        weight: 100;
+    }
+    &-box{
+        border: 1px solid $color-black;
+    }
+    .schedule-column__heading{
+        color: $color-brand-orange;
+        font-size: 30px;
+        margin: 30px 0px 70px 0px;
+        text-align: center;
+    }
+    .item{
+        div{
+            display: inline-block;
+            font-size: 17px;
+            vertical-align: top;
+        }
+        .image{
+            width: 80px;
+        }
+        .time, .title{
+            margin-top: 12px;
+        }
+    }
+
+}
