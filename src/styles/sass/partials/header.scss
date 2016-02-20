@@ -1,13 +1,13 @@
 .section--header{
     position: relative;
-    background: url(../../images/header/header-bg.png) repeat;
+    background: url('../../images/header/header-bg.png') repeat;
     font-family: $font-roboto;
     text-transform: uppercase;
     &:after{
         content: '';
         display: inline-block;
         position: absolute;
-        background: url(../../images/header/header-bg-triangle.png) center no-repeat;
+        background: url('../../images/header/header-bg-triangle.png') center no-repeat;
         height: $header-triangle-height;
         bottom: -$header-triangle-height;
         left: 0;
