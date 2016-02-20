@@ -1,0 +1,34 @@
+.contacts{
+    position: relative;
+    background: url('../../images/contacts/contacts-bg.jpg') repeat;
+    font-family: $font-roboto;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: $color-white;
+    &-box{
+        margin: 50px 0;
+        .contacts__heading{
+            text-align: center;
+            font-size: 36px;
+        }
+        .address{
+            display: inline-block;
+        }
+        .address-icon{
+            display: inline-block;
+            content: '';
+            position: relative;
+            background: url('../../images/contacts/map-pointer.png');
+            width:22px;
+            height: 32px;
+            margin-right: 20px;
+        }
+        iframe{
+            width: 440px;
+            height: 291px;
+            frameborder: 0;
+            border: 5px double $color-white;
+            margin: 5px 0 0 0;
+        }
+    }
+}
