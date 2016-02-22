@@ -1,0 +1,10 @@
+.partners{
+    &-box{
+        padding: 30px 0;
+        text-align: center;
+        border:1px solid $color-black;
+        img{
+            width: 140px;
+        }
+    }
+}

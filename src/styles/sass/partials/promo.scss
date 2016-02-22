@@ -1,4 +1,4 @@
-.promo {
+.promo{
     background: url('../../images/promo/cover.jpg') 80% 0 no-repeat;
     background-size: cover;
     height: 600px;
@@ -6,7 +6,7 @@
     font-size: 30px;
     text-transform: uppercase;
     padding-top: $header-triangle-height;
-    
+
     h1{
         font: {
             family: $font-promo;
@@ -30,7 +30,7 @@
             height: 30px;
         }
     }
-    
+
     &__tickets{
         margin-top: 60px;
         text-align: center;
