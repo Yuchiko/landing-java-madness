@@ -1,6 +1,6 @@
 .tickets {
 	background: url("../../images/tickets/pattern.jpg") 0 0 repeat;
-	padding: 70px 0;
+	padding: 30px 0 10px;
 
 	.tickets-box {
 		@include make-row(0);
@@ -42,13 +42,13 @@
 		.price {
 			margin: 0 50px 50px;
 			padding: 15px 0;
-			border-top: 1px dashed #dfdfdf;
-			border-bottom: 1px dashed #dfdfdf;
 			text-align: center;
-			font-size: 20px;
+			font-size: 60px;
 			line-height: 20px;
 
-
+            i {
+                font-size: 15px;
+            }
 		}
 
 		.buy {
@@ -61,12 +61,15 @@
 				width: 100%;
 				padding: 10px;
 				background: $color-brand-red;
-				text-align: center;
-				text-transform: uppercase;
-				color: $color-white;
-				&:hover,
+				text: {
+                    align: center;
+                    transform: uppercase;
+                    decoration: none;
+                }
+                color: $color-white;
+                &:hover,
 				&:focus {
-
+                    background: darken($color-brand-red,20);
 				}
 			}
 		}
@@ -96,11 +99,13 @@
 		.price {
 			margin: 0 50px 50px;
 			padding: 15px 0;
-			border-top: 1px dashed #dfdfdf;
-			border-bottom: 1px dashed #dfdfdf;
 			text-align: center;
-			font-size: 20px;
+			font-size: 60px;
 			line-height: 20px;
+
+            i {
+                font-size: 15px;
+            }
 
 			> div + div {
 				margin-top: 10px;
@@ -117,12 +122,16 @@
 				width: 100%;
 				padding: 20px 10px;
 				background: $color-brand-cayan;
-				text-align: center;
-				text-transform: uppercase;
+                text: {
+                    align: center;
+                    transform: uppercase;
+                    decoration: none;
+                }
 				color: $color-white;
+
 				&:hover,
 				&:focus {
-
+                    background: darken($color-brand-cayan,20);
 				}
 			}
 		}
@@ -163,11 +172,13 @@
 		.price {
 			margin: 0 50px 50px;
 			padding: 15px 0;
-			border-top: 1px dashed #dfdfdf;
-			border-bottom: 1px dashed #dfdfdf;
 			text-align: center;
-			font-size: 20px;
+			font-size: 60px;
 			line-height: 20px;
+
+            i {
+                font-size: 15px;
+            }
 		}
 
 		.buy {
@@ -180,12 +191,16 @@
 				width: 100%;
 				padding: 10px;
 				background: $color-brand-purple;
-				text-align: center;
-				text-transform: uppercase;
+                text: {
+                    align: center;
+                    transform: uppercase;
+                    decoration: none;
+                }
 				color: $color-white;
+
 				&:hover,
 				&:focus {
-
+                    background: darken($color-brand-purple,20);
 				}
 			}
 		}
