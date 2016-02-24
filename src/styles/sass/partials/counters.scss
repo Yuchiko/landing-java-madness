@@ -1,9 +1,33 @@
+$color-back:$color-black;
+$color-shad:$color-brand-purple;
+
 .counters {
 	padding: 70px 0;
 
-	.icon {
-		text-align: center;
-	}
+	&-box{
+        p{
+            animation:extrude 4s infinite step-end;
+            letter-spacing: 1.1px;
+            color:$color-brand-orange;
+            text:{
+                align: center;
+                transform: uppercase;
+                shadow: none;
+            }
+            font:{
+                family: $font-roboto;
+                size: 30px;
+                weight: 600;
+            }
+
+        }
+
+        @for $i from 1 through 4 { // iterate the animation delays for each nth-child
+            div:nth-of-type(#{$i}) p {
+                animation-delay:1s + $i;
+            }
+        }
+    }
 
 	.i-will-go {
 		padding-top: 30px;
@@ -23,4 +47,36 @@
 			}
 		}
 	}
+}
+
+
+@keyframes extrude {
+    0% {
+        text-shadow:
+        1px 1px $color-back, // 3D extrusion
+        2px 2px $color-back,
+        3px 3px $color-back,
+        4px 4px $color-back,
+        5px 5px $color-back,
+        6px 6px $color-back,
+        7px 7px $color-back,
+        8px 8px $color-back,
+        9px 9px $color-back,
+        10px 10px $color-back,
+        10px 11px $color-shad, // shadow
+        8px 12px $color-shad,
+        6px 13px $color-shad,
+        4px 14px $color-shad,
+        2px 15px $color-shad,
+        0px 16px $color-shad,
+        -2px 17px $color-shad,
+        -4px 18px $color-shad,
+        -6px 19px $color-shad,
+        -8px 20px $color-shad,
+        -10px 21px $color-shad
+    ;
+    }
+    25% {
+        text-shadow:none;
+    }
 }
