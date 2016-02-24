@@ -5,17 +5,29 @@
     }
     .row{
         margin: 0px;
+        position: relative;
     }
     &-box{
         border: 1px solid $color-black;
+    }
+    &-box__icon{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        color: $color-gray;
+        margin: 0 auto;
+        text-align: center;
     }
     &-column{
         padding-left: 0px;
         padding-right: 0px;
     }
-    &-column:first-child .schedule-column__table{
+
+    &-column.left-table .schedule-column__table{
         border-right: 1px solid $color-black;
     }
+
     &-column__heading{
         color: $color-brand-orange;
         font-size: 30px;
@@ -44,8 +56,16 @@
 
 @media (max-width: $screen-sm-max) {
     .schedule {
-        &-column:first-child .schedule-column__table{
+        &-column.left-table .schedule-column__table{
             border-right: none;
+        }
+        .item{
+            div{
+                font-size: 12px;
+            }
+            .time, .title{
+                margin-top: 18px;
+            }
         }
     }
 }
