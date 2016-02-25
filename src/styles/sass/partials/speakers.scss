@@ -1,5 +1,24 @@
 .speakers{
     background: url("../../images/speakers/bg-pattern.jpg") 0 0 repeat-x;
-    height: 465px;
     padding: 70px 0;
+
+    .inner{
+        text-align: center;
+    }
+
+    .item{
+        display: inline-block;
+        width: 200px;
+        margin: 5px;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 100px;
+        }
+    }
+
+    .owl-item{
+        display: inline-block;
+    }
 }
