@@ -15,9 +15,13 @@ $color-shad:$color-brand-purple;
                 shadow: none;
             }
             font:{
-                family: $font-roboto;
-                size: 30px;
+                family: $font-fjalla;
+                size: 60px;
                 weight: 600;
+            }
+
+            i {
+                display: block;
             }
 
         }
@@ -40,6 +44,7 @@ $color-shad:$color-brand-purple;
 			color: $color-white;
 			text-transform: uppercase;
 			font-size: 18px;
+            border-radius: 100px;
 			&:hover,
 			&:focus {
 				background: $color-brand-purple-darker;

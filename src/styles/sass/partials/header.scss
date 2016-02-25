@@ -9,7 +9,7 @@
         position: absolute;
         background: url('../../images/header/header-bg-triangle.png') center no-repeat;
         height: $header-triangle-height;
-        bottom: -$header-triangle-height;
+        bottom: -$header-triangle-height + 4;
         left: 0;
         right: 0;
         margin: auto;
