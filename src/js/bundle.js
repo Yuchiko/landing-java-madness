@@ -3,5 +3,5 @@
 //= scripts/classie.js
 //= scripts/jquery.easing.min.js
 //= scripts/scrolling-nav.js
-//= scripts/owl.carousel.min.js
+//= scripts/slick.js
 //= scripts/scripts.js

@@ -46,7 +46,12 @@
         .image{
             width: 80px;
         }
-        .time, .title{
+        .time{
+            width: 100px;
+            margin-top: 12px;
+        }
+        .title{
+            max-width: 300px;
             margin-top: 12px;
         }
     }
@@ -54,17 +59,35 @@
 }
 
 
-@media (max-width: $screen-sm-max) {
+@media (max-width: $screen-xs-max) {
     .schedule {
-        &-column.left-table .schedule-column__table{
-            border-right: none;
-        }
         .item{
             div{
                 font-size: 12px;
             }
             .time, .title{
                 margin-top: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .schedule {
+        &-column.left-table .schedule-column__table {
+            border-right: none;
+        }
+    }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+    .schedule {
+        .item {
+            div {
+                font-size: 12px;
+            }
+            .title {
+                max-width: 200px;
             }
         }
     }

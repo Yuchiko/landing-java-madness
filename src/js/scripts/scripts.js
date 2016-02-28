@@ -1,5 +1,40 @@
 $(document).ready(function() {
 
+    $(".slick-carousel").slick({
+
+        // normal options...
+        infinite: true,
+        slidesToShow: 3,
+        slidesToSlide: 1,
+
+        // the magic
+        responsive: [{
+
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3
+            }
+
+        }, {
+
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 2,
+                dots: true
+            }
+
+        }, {
+
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                dots: true,
+                variableWidth: true
+            }
+
+        }]
+    });
+
     var wow = new WOW(
         {
             boxClass:     'wow',      // animated element css class (default is wow)
