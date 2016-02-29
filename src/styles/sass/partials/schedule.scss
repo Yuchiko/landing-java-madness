@@ -59,8 +59,22 @@
         }
     }
 
-    .tab-content {
+    .tab-description {
+        padding: 0;
         margin-top: 30px;
+
+        div {
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .day-first {
+            border-right: 1px solid $color-gray;
+        }
+    }
+
+    .tab-content {
+        margin-top: 15px;
         font-size: 20px;
         border-bottom: 1px solid $color-gray;
 
