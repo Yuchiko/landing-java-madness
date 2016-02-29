@@ -2,6 +2,10 @@
     background: url("../../images/speakers/bg-pattern.jpg") 0 0 repeat-x;
     padding: 70px 0;
 
+    .container {
+        padding: 0 30px;
+    }
+
     &-box{
         text-align: center;
         max-width: 960px;

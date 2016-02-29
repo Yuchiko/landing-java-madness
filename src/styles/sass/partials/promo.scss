@@ -6,6 +6,7 @@
     font-size: 30px;
     text-transform: uppercase;
     padding-top: $header-triangle-height;
+    overflow-x: hidden;
 
     h1{
         font: {
@@ -45,5 +46,13 @@
            }
         }
 
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .promo {
+        h1 {
+            font-size: 60px;
+        }
     }
 }
